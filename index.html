@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Markdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+
+        <header class="topo">
+            <div>
+                <h1>Editor de Markdown</h1>
+                <p>Edite seu conteúdo em Markdown e veja a visualização em tempo real.</p>
+            </div>
+
+            <span class="badge">Preview ao vivo</span>
+        </header>
+
+        <section class="editor-area">
+
+            <div class="painel">
+                <div class="painel-topo">
+                    <h2>Markdown</h2>
+                    <span>Entrada</span>
+                </div>
+
+                <textarea id="markdownInput" placeholder="Digite seu Markdown aqui..."></textarea>
+            </div>
+
+            <div class="painel">
+                <div class="painel-topo">
+                    <h2>Preview</h2>
+                    <span>Resultado</span>
+                </div>
+
+                <article id="preview" class="preview"></article>
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
