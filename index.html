@@ -8,18 +8,61 @@
 </head>
 <body>
     <main class="app">
-
         <header class="topo">
             <div>
+                <span class="eyebrow">Projeto Front-End</span>
                 <h1>Editor de Markdown</h1>
-                <p>Edite seu conteúdo em Markdown e veja a visualização em tempo real.</p>
+                <p>Edite seu conteúdo em Marldown, visualise em tempo real e exporte seu arquivo.</p>
+            </div>
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro ou escuro">
+                <span id="themeIcon">&#x1F319</span>
+                <span id="themText">Tema escuro</span>
+            </button>
+        </header>
+        <section class="toolbar" aria-label="Barra de ferramentas do editor">
+            <button class="tool-btn" type="button" id="boldBtn" title="Negrito">
+                <strong>B</strong>
+            </button>
+
+            <button class="tool-btn" type="button" id="italicBtn" title="Itálico">
+                <em>I</em>
+            </button>
+
+            <button class="tool-btn" type="button" id="listBtn" title="Lista">
+                Lista
+            </button>
+
+            <button class="tool-btn" type="button" id="copyBtn" title="Copiar Markdown">
+                Copiar Markdown
+            </button>
+
+            <button class="tool-btn" type="button" id="exportBtn" title="Exportar arquivo .md">
+                Exportar .MD
+            </button>
+
+            <button class="tool-btn" type="button" id="clearBtn" title="Limpar">
+                Limpar
+            </button>
+        </section>
+
+        <section class="stats" aria-label="Contadores do texto">
+            <div class="stat-card">
+                <span id="wordCount">0</span>
+                <small>palavras</small>
             </div>
 
-            <span class="badge">Preview ao vivo</span>
-        </header>
+            <div class="stat-card">
+                <span id="charCount">0</span>
+                <small>caracteres</small>
+            </div>
+
+            <div class="stat-card">
+                <span id="lineCount">0</span>
+                <small>linhas</small>
+            </div>
+        </section>
 
         <section class="editor-area">
-
             <div class="painel">
                 <div class="painel-topo">
                     <h2>Markdown</h2>
@@ -35,11 +78,14 @@
                     <span>Resultado</span>
                 </div>
 
-                <article id="preview" class="preview"></article>
+                <article id="preview" class="preview" aria-line="polite"></article>
             </div>
         </section>
+
+        <p class="status" id="statusMessage" role="status"></p>
     </main>
-    
+
     <script src="script.js"></script>
+
 </body>
 </html>
